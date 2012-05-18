@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<!--[if IE]>
+		<script type="text/javascript">
+			window.location = "killyourself";
+		</script>
+		<![endif]-->
+
+		<title>It's the Shazinator!</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Russo+One" />
+		<link rel="stylesheet" type="text/css" href="<%= staticPrefix %>/stylesheets/grid.css" />
+		<link rel="stylesheet" type="text/css" href="<%= staticPrefix %>/stylesheets/style.css" />
+		<link rel="stylesheet" type="text/css" href="<%= staticPrefix %>/stylesheets/jquery.qtip.min.css" />
+		
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js"></script>
+		<script type="text/javascript" src="<%= staticPrefix %>/javascripts/shazntr.js"></script>
+		<script type="text/javascript" src="<%= staticPrefix %>/javascripts/jquery.qtip.min.js"></script>
+	</head>
+	<body>
+
+		<div class="wrapper">
+
+			<%- partial("header.ejs") %>
+			
+			<div class="content container_12">
+				<div class="big-message">
+					<span><%= message %></span>
+					<div class="arrow-right"></div>
+				</div>
+
+				<%- body %>
+
+			</div>
+
+			<div class="push"></div>
+
+		</div>
+
+		<%- partial("footer.ejs") %>
+
+	</body>
+</html>

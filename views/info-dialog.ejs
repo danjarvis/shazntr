@@ -1,0 +1,47 @@
+<div id="info_modal_wrapper" class="info-modal-wrapper">
+</div>
+<!-- Note: this is not nested to work around opacity inheritance -->
+<div id="info_dialog" class="info-content-wrapper">
+	<div class="info-header">
+		<span class="header-title">The Shazinator : Help</span>
+		<span id="info_dialog_close_button" class="header-close">X</span>
+	</div>
+
+	<!-- Navigation -->
+	<ul class="info-nav">
+		<li class="left"><a id="info_nav_about" class="selected">About</a><span class="selected"></span></li>
+		<li><a id="info_nav_usage">Usage</a><span></span></li>
+		<li class="right"><a id="info_nav_commands">Commands</a><span></span></li>
+	</ul>
+
+	<!-- Wrap all views in one line -->
+	<div id="info_content_wrapper">
+		<div id="info_about">
+			<h2>Information</h2>
+			<p>The Shazinator is a tool you can use to chain together voice commands from Tribes Ascend's Voice Game System [VGS]. You can specify exactly which commands to play and the order to play them in. You can also play a random series of commands.</p>
+			<p>Just think of how much fun you can have by simulating the end of a Tribes match all by yourself! (you know what I'm talking about.... Shazbot! Shazbot! Shazbot!, and so on).</p>
+			<br />
+			<h2>Development</h2>
+			<p>The Shazinator is coded in <a class="info-dialog-link" href="http://www.nodejs.org" target="_blank">NodeJS</a>. Hosting is currently provided by <a class="info-dialog-link" href="http://www.heroku.com" target="_blank">heroku.</a> If you are interested in viewing or playing with the source, head on over to <a class="info-dialog-link" href="http://www.github.com/danjarvis" target="_blank">github</a> and clone or fork it.<p>
+			<p>Lastly, please direct any and all feedback, comments, or rage to <a class="info-dialog-link" href="http://www.twitter.com/danjarvis" target="_blank">@danjarvis.</a></p>
+		</div>
+		<div id="info_usage">
+			<h2>Usage</h2>
+			<p>The easiest way to use The Shazinator is to click the <strong><span class="green">green</span></strong> create button on the home screen, and then enter a series of commands in the input field - <em>separate the commands with the plus symbol.</em> When you feel you have created a worthy shazinator-thingy, click the play button on the right. The image below shows a suitable entry.<p>
+			<p><img id="create_example" src="/images/create-example.png" /></p>
+			<p>It is also possible to play a random series of commands; simply click the <strong><span class="red">red</span></strong> random button on the home screen. The maximum number of clips that will be played is 24.</p>
+			<p>You may have noticed that when you generate a shazinator-thingy your selected commands show up in your browser's address bar. This means that you can use The Shazinator by simply typing commands directly into your browser's address bar (essentially by passing the home page).  The link below serves as an example - give it a click.</p>
+			<p><a class="info-dialog-link push-l-26" href="http://shazinator.com/vgra+vvh+vvh+vgw+vgq+vgn" target="_blank">http://shazinator.com/vgra+vvh+vvh+vgw+vgq+vgn</a></p>
+		</div>
+		<div id="info_commands">
+			<h2>Supported Commands</h2>
+			<div id="commands_wrapper">
+				<%for (var i = 0; i < commands.length; i++) {%>
+					<div class="info-clip">
+						<span class="clip-title"><%= commands[i].vgs %></span><span class="clip-message"><%= commands[i].message %></span>
+					</div>
+				<%}%>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+<div id="main_buttons" <%if (forClips == true) {%>class="hidden"<%}%>>
+	<div id="home_buttons">
+	<%if (forClips) {%>
+		<div id="home_button_wrapper">
+			<div id="home_button">
+				<img id="home_image" src="/images/home.png" />
+			</div>
+		</div>
+	<% } else { %>
+		<div id="help_button_wrapper">
+			<div id="help_button">
+				<img id="help_image" src="/images/help.png" />
+			</div>
+		</div>
+	<%}%>
+	<%if (forClips) {%>
+		<div id="replay_button_wrapper">
+			<div id="replay_button">
+				<img id="replay_image" src="/images/replay.png" />
+			</div>
+		</div>
+	<%}%>
+		<div id="create_button_wrapper">
+			<div id="create_button">
+				<img id="help_image" src="/images/create.png" />
+			</div>
+		</div>
+		<div id="random_button_wrapper">
+			<div id="random_button">
+				<img id="random_image" src="/images/random.png" />
+			</div>
+		</div>
+	</div>
+	<div id="create_interface">
+		<div id="create_input_wrapper">
+			<input id="create_text_input" name="phrase" />
+			<div id="play_button">
+				<img id="play_image" src="/images/play.png" />
+			</div>
+			<div id="cancel_button">
+				<img id="cancel_image" src="/images/cancel.png" />
+			</div>
+		</div>
+	</div>
+</div>
