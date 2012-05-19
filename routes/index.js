@@ -18,7 +18,8 @@ exports.clips = function(req, res) {
 	res.render('clips',{
 		clips: clipDao.getClips(req),
 		message: messageDao.getMessage(),
-		forClips: true
+		forClips: true,
+		loadingMessage: messageDao.getLoadingMessage()
 	});	
 };
 
@@ -27,6 +28,7 @@ exports.random = function(req, res) {
 	res.render('clips', {
 		clips: clipDao.getRandomClips(),
 		message: messageDao.getMessage(),
-		forClips: true
+		forClips: true,
+		loadingMessage: messageDao.getLoadingMessage()
 	});
 };
