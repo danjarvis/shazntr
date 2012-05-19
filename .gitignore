@@ -1,1 +1,5 @@
-node_modules/
+node_modules/ejs
+node_modules/express
+node_modules/.bin/
+*.swp
+*.swo

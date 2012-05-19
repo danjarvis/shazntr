@@ -34,8 +34,39 @@ function Shazntr()
 		$("#help_button").on("click", this.help_button_onClick);
 		$("#info_dialog_close_button").on("click", this.info_dialog_close_button_onClick);
 		$(".info-nav li a").on("click", {me: this}, this.info_nav_onClick);
+
+		this.createTips();
 	};
 
+	/**
+	 * Create the tool tips for the upper right links.
+	 */
+	this.createTips = function()
+	{
+		var sharedTip = {
+			position: {
+				my: 'top middle',
+				at: 'bottom middle'
+			},
+			style: {
+				tip: true,
+				classes: 'ui-tooltip-dark ui-tooltip-rounded'
+			}
+		};
+		$("#tribes_button").qtip($.extend({}, sharedTip, {
+			content: "Tribes."
+		}));
+		$("#twitter_button").qtip($.extend({}, sharedTip, {
+			content: "Contact."
+		}));
+		$("#octocat_button").qtip($.extend({}, sharedTip, {
+			content: "Github."
+		}));
+	};
+
+	/**
+	 * Called for each audio element when it is ready for playback.
+	 */
 	this.clipReady = function()
 	{
 		if (this.clipsReady == this.clipCount)
