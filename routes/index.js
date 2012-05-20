@@ -14,13 +14,22 @@ exports.index = function(req, res) {
 
 /* GET: /:vgs? */
 exports.clips = function(req, res) {
-	// Grab list of .ogg files and pass them to clips.ejs	
-	res.render('clips',{
-		clips: clipDao.getClips(req),
-		message: messageDao.getMessage(),
-		forClips: true,
-		loadingMessage: messageDao.getLoadingMessage()
-	});	
+	// Grab list of .ogg files and pass them to clips.ejs
+	var requestedClips = clipDao.getClips(req);
+	if (requestedClips != null && requestedClips.length > 0) {
+		res.render('clips',{
+			clips: requestedClips,
+			message: messageDao.getMessage(),
+			forClips: true,
+			loadingMessage: messageDao.getLoadingMessage()
+		});
+	} else {
+		res.render('invalid', {
+			message: 'S H A Z B O T.',
+			forClips: false,
+			commands: clipDao.getSupportedCommands()
+		});
+	}
 };
 
 /* GET: /random */
@@ -41,5 +50,14 @@ exports.noie = function(req, res) {
 	 */
 	res.render('noie', {
 		layout: false
+	});
+};
+
+/* GET: Invalid Request */
+exports.invalid = function(req, res) {
+	res.render('invalid', {
+		message: 'S H A Z B O T.',
+		forClips: false,
+		commands: clipDao.getSupportedCommands()
 	});
 };

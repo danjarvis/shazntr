@@ -11,7 +11,6 @@ app.configure(function(){
   app.set('view engine', 'ejs');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(app.router);
 });
 
 app.configure('development', function(){
@@ -20,6 +19,7 @@ app.configure('development', function(){
 	app.set('view options', {
 		staticPrefix: ''
 	});
+  app.use(app.router);
 });
 
 app.configure('production', function(){
@@ -29,6 +29,7 @@ app.configure('production', function(){
 	app.set('view options', {
 		staticPrefix: 'http://url.for.amazon.s3'
 	});
+  app.use(app.router);
 });
 
 /*
@@ -38,6 +39,7 @@ app.get('/', routes.index);
 app.get('/random', routes.random);
 app.get('/killyourself', routes.noie);
 app.get('/:vgs?', routes.clips);
+app.get('*', routes.invalid);
 
 app.listen(1337, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
