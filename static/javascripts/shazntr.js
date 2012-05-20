@@ -34,6 +34,7 @@ function Shazntr()
 		$("#help_button").on("click", this.help_button_onClick);
 		$("#info_dialog_close_button").on("click", this.info_dialog_close_button_onClick);
 		$(".info-nav li a").on("click", {me: this}, this.info_nav_onClick);
+		$("#create_text_input").on("keydown", {me: this}, this.create_text_input_onKeyDown);
 
 		this.createTips();
 	};
@@ -143,6 +144,15 @@ function Shazntr()
 		var phrase = $("#create_text_input").val();
 		if (phrase != null && phrase.length > 2)
 			window.location = "/" + phrase;
+	};
+
+	/**
+	 * Play a new shazinator-thingy - via Enter Key Down
+	 */
+	this.create_text_input_onKeyDown = function(event)
+	{
+		if (event.keyCode == 13)
+			event.data.me.play_button_onClick();
 	};
 
 	/**
