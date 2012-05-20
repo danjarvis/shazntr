@@ -32,3 +32,14 @@ exports.random = function(req, res) {
 		loadingMessage: messageDao.getLoadingMessage()
 	});
 };
+
+/* GET: /killyourself */
+exports.noie = function(req, res) {
+	/**
+	 * The reason I am not supporting the cesspool that is IE is _NOT_ because I am lazy.
+	 * It is because the browser doesn't support the HTML 5 Audio API (<audio /> element).
+	 */
+	res.render('noie', {
+		layout: false
+	});
+};

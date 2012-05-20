@@ -36,6 +36,7 @@ app.configure('production', function(){
  */
 app.get('/', routes.index);
 app.get('/random', routes.random);
+app.get('/killyourself', routes.noie);
 app.get('/:vgs?', routes.clips);
 
 app.listen(1337, function(){
