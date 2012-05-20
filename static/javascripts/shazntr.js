@@ -99,10 +99,7 @@ function Shazntr()
 		}
 
 		// Fade / Highlight this clip in before playing it...
-		if (!isReplay)
-			$("#clip_wrapper_" + number).fadeIn();
-		else
-			$("#clip_wrapper_" + number).effect("bounce", {times: 3, distance: 10}, 300);
+		$("#clip_wrapper_" + number).fadeIn();
 
 		var clip = $("#clip_" + number).get(0);
 		var duration = $("source", clip).attr("duration");
@@ -154,8 +151,10 @@ function Shazntr()
 	this.replay_button_onClick = function(event)
 	{
 		if (event.data.me.isPlayingBack != true) {
-			event.data.me.playClip(0, true);
-			event.data.me.isPlayingBack = true;
+			$(".clip-wrapper").fadeOut(function() {
+				event.data.me.playClip(0, true);
+				event.data.me.isPlayingBack = true;
+			});
 		}
 	};
 
