@@ -17,7 +17,8 @@ app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
   app.use(express.static(__dirname + '/static'));
 	app.set('view options', {
-		staticPrefix: ''
+		staticPrefix: '',
+		staticSuffix: ''
 	});
   app.use(app.router);
 });
@@ -27,7 +28,8 @@ app.configure('production', function(){
 	
 	// In production, all static content is on Amazon S3
 	app.set('view options', {
-		staticPrefix: 'http://url.for.amazon.s3'
+		staticPrefix: 'https://s3.amazonaws.com/shazinator',
+		staticSuffix: ''
 	});
   app.use(app.router);
 });
@@ -42,5 +44,5 @@ app.get('/:vgs?', routes.clips);
 app.get('*', routes.invalid);
 
 app.listen(1337, function(){
-  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+  console.log("The Shazinator is listening on port %d in %s mode", app.address().port, app.settings.env);
 });

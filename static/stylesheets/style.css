@@ -10,7 +10,7 @@ html, body {
 
 body {
   	/*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
-	background: url("/images/marble.jpg") repeat scroll center top;
+	background: url("../images/marble.jpg") repeat scroll center top;
 }
 
 a {
@@ -145,7 +145,7 @@ div.big-message {
 	box-shadow: inset 1px 1px 5px #000;*/
 	text-align: center;
 	background: #FF921D;
-	background-image: url("/images/big-message-bg.png");
+	background-image: url("../images/big-message-bg.png");
 	position: relative;
 	margin: 0px 10px;
 }
@@ -263,7 +263,7 @@ div#help_button_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 128px;
 	display: inline-block;
@@ -305,7 +305,7 @@ div#home_button_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 128px;
 	display: inline-block;
@@ -345,7 +345,7 @@ div#replay_button_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 128px;
 	display: inline-block;
@@ -388,7 +388,7 @@ div#create_button_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 128px;
 	display: inline-block;
@@ -431,7 +431,7 @@ div#random_button_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 128px;
 	display: inline-block;
@@ -481,7 +481,7 @@ div#create_input_wrapper {
 	-moz-box-shadow: 0 0 3px 1px #040404;
 	-webkit-box-shadow: 0 0 3px 1px #040404;
 	box-shadow: 0 0 3px 1px #141414;
-	background-image: url("/images/stone.jpg");
+	background-image: url("../images/stone.jpg");
 	height: 128px;
 	width: 800px;
 	display: inline-block;

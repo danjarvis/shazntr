@@ -2,7 +2,7 @@
 <%  for (var i = 0; i < clips.length; i++) { %>
 	<div id="clip_wrapper_<%= i %>" class="clip-wrapper <%= clips[i]['class'] %>">
 			<audio id="clip_<%= i %>">
-			<source src="<%= clips[i]['path'] %>" duration="<%= clips[i]['duration'] %>" />
+			<source src="<%= staticPrefix + clips[i]['path'] %>" duration="<%= clips[i]['duration'] %>" />
 			</audio>
 			<input id="clip_count" type="hidden" class="hidden" value="<%= clips.length %>" />
 		<div class="callout <%= clips[i]['callout-class'][0] %>">
@@ -19,7 +19,7 @@
 <div class="loading-modal-wrapper">
 	<div class="loading-content">
 		<h1>THE SHAZINATOR.</h1>
-		<img src="/images/loading.gif" />
+		<img src="<%= staticPrefix %>/images/loading.gif" />
 		<p><%= (typeof loadingMessage == 'undefined') ? 'please wait while i buffer...' : loadingMessage %></p>
 	</div>
 </div>
