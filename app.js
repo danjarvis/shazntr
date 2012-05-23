@@ -43,6 +43,6 @@ app.get('/killyourself', routes.noie);
 app.get('/:vgs?', routes.clips);
 app.get('*', routes.invalid);
 
-app.listen(1337, function(){
+app.listen(process.env.PORT || 1337, function(){
   console.log("The Shazinator is listening on port %d in %s mode", app.address().port, app.settings.env);
 });
