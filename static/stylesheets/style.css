@@ -286,6 +286,7 @@ div#help_button {
 div#help_button:hover {
 	-moz-box-shadow: 0 0 5px 6px #444;
 	-webkit-box-shadow: 0 0 5px 6px #444;
+	box-shadow: 0 0 5px 6px #444;
 	cursor: pointer;
 }
 div#help_button:active {
@@ -328,6 +329,7 @@ div#home_button {
 div#home_button:hover {
 	-moz-box-shadow: 0 0 5px 6px #444;
 	-webkit-box-shadow: 0 0 5px 6px #444;
+	box-shadow: 0 0 5px 6px #444;
 	cursor: pointer;
 }
 div#home_button:active {
@@ -369,6 +371,7 @@ div#replay_button {
 div#replay_button:hover {
 	-moz-box-shadow: 0 0 5px 6px #444;
 	-webkit-box-shadow: 0 0 5px 6px #444;
+	box-shadow: 0 0 5px 6px #444;
 	cursor: pointer;
 }
 div#replay_button:active {
@@ -412,6 +415,7 @@ div#create_button {
 div#create_button:hover {
 	-moz-box-shadow: 0 0 5px 6px #444;
 	-webkit-box-shadow: 0 0 5px 6px #444;
+	box-shadow: 0 0 5px 6px #444;
 	cursor: pointer;
 }
 div#create_button:active {
@@ -455,6 +459,7 @@ div#random_button {
 div#random_button:hover {
 	-moz-box-shadow: 0 0 5px 6px #444;
 	-webkit-box-shadow: 0 0 5px 6px #444;
+	box-shadow: 0 0 5px 6px #444;
 	cursor: pointer;
 }
 div#random_button:active {
@@ -520,6 +525,7 @@ div#play_button {
 div#play_button:hover {
 	-moz-box-shadow: 0 0 5px 4px #444;
 	-webkit-box-shadow: 0 0 5px 4px #444;
+	box-shadow: 0 0 5px 4px #444;
 	cursor: pointer;
 }
 div#play_button:active {
@@ -549,6 +555,7 @@ div#cancel_button {
 div#cancel_button:hover {
 	-moz-box-shadow: 0 0 5px 4px #444;
 	-webkit-box-shadow: 0 0 5px 4px #444;
+	box-shadow: 0 0 5px 4px #444;
 	cursor: pointer;
 }
 div#cancel_button:active {
