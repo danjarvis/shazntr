@@ -21,4 +21,4 @@ If you would like, you can run a local instance of The Shazinator. First, ensure
 `$ node app.js`
 
 
-You should see output simimlar to `The Shazinator is listening on port 1337 in development mode`.  Now, just point your web browser to `http://localhost:1337` and start shazinating!
+You should see output similar to `The Shazinator is listening on port 1337 in development mode`.  Now, just point your web browser to `http://localhost:1337` and start shazinating!
