@@ -443,7 +443,7 @@ div#random_button_wrapper {
 	vertical-align: top;
 }
 div#random_button {
-	background: #0B6AFF;
+	background: #8C1713;
 	background-image: -moz-linear-gradient(top, #8C1713, #CC211B);
 	background-image: -webkit-linear-gradient(top, #8C1713, #CC211B);
 	border-radius: 8px;
@@ -508,7 +508,7 @@ input#create_text_input {
 }
 
 div#play_button {
-	background: #0B6AFF;
+	background: #044C29;
 	background-image: -moz-linear-gradient(top, #044C29, #167F39);
 	background-image: -webkit-linear-gradient(top, #044C29, #167F39);
 	border-radius: 0 8px 8px 0;
