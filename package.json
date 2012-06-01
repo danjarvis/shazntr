@@ -4,5 +4,9 @@
 	"dependencies": {
 		"express": "2.5.8",
 		"ejs": ">= 0.0.1"
+	},
+	"engines": {
+		"node": "0.6.18",
+		"npm": "1.1.9"
 	}
 }
